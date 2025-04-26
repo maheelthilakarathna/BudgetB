@@ -16,12 +16,20 @@ class FinancialReportsScreen extends StatelessWidget {
                 // Logic to display income vs expense chart/graph
               },
               child: const Text('View Income vs Expense Report'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.yellow, // Yellow button
+                foregroundColor: Colors.black, // Black text
+              ),
             ),
             ElevatedButton(
               onPressed: () {
                 // Logic to display goal progress chart/graph
               },
               child: const Text('View Goal Progress Report'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.yellow, // Yellow button
+                foregroundColor: Colors.black, // Black text
+              ),
             ),
           ],
         ),

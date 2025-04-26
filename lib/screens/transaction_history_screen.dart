@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../database/db_helper.dart';  // Import DBHelper
 
 class TransactionHistoryScreen extends StatelessWidget {
-  // Remove const from the constructor
+  // Remove const constructor as '_dbHelper' is initialized with a non-constant value.
   TransactionHistoryScreen({super.key});
 
   final DBHelper _dbHelper = DBHelper(); // Create an instance of DBHelper
@@ -33,9 +33,9 @@ class TransactionHistoryScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               var transaction = snapshot.data![index];
               return ListTile(
-                title: Text(transaction['category']),
-                subtitle: Text('Amount: \$${transaction['amount']}'),
-                trailing: Text('Date: ${transaction['date']}'),
+                title: Text(transaction['category'], style: TextStyle(color: Colors.yellow)),
+                subtitle: Text('Amount: \$${transaction['amount']}', style: TextStyle(color: Colors.yellow)),
+                trailing: Text('Date: ${transaction['date']}', style: TextStyle(color: Colors.yellow)),
               );
             },
           );
